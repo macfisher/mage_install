@@ -4,10 +4,10 @@
 system("sudo -u root git clone https://github.com/amacgregor/magento-1.7.0.2.git /var/www/public/install");
 
 // set permissions
-system("sudo -u root chown -R www-data:www-data install/");
-system("sudo -u root chmod -R 755 install/var/");
-system("sudo -u root chmod -R 755 install/media/");
-system("sudo -u root chmod -R 755 install/app/etc/");
+system("sudo -u root chown -R www-data:www-data /var/www/public/install/");
+system("sudo -u root chmod -R 755 /var/www/public/install/var/");
+system("sudo -u root chmod -R 755 /var/www/public/install/media/");
+system("sudo -u root chmod -R 755 /var/www/public/install/app/etc/");
 
 $servername = "localhost";
 $username = "root";
