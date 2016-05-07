@@ -29,5 +29,5 @@ if ($conn->query($sql) === TRUE) {
 }
 
 system("sudo -u root mv /var/www/public/install/* ..");
-system("sudo -u root rm -r install");
+system("sudo -u root rm -r /var/www/public/install");
 system("sudo -u root rm -r /var/www/public/mage_install");
