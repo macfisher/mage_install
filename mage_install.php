@@ -1,7 +1,7 @@
 <?php
 
 // clone Magento 1.7 mirror
-system("sudo -u root git clone https://github.com/amacgregor/magento-1.7.0.2.git install");
+system("sudo -u root git clone https://github.com/amacgregor/magento-1.7.0.2.git /var/www/public/install");
 
 // set permissions
 system("sudo -u root chown -R www-data:www-data install/");
@@ -28,4 +28,5 @@ if ($conn->query($sql) === TRUE) {
     echo "\nError creating database: " . $conn->error;
 }
 
+system("sudo -u root cd /var/www/public");
 system("sudo -u root rm -r /var/www/public/mage_install");
