@@ -23,10 +23,10 @@ if ($conn->connect_error) {
 // Create database
 $sql = "CREATE DATABASE magento";
 if ($conn->query($sql) === TRUE) {
-    echo "\nDatabase created successfully";
+    echo "Database created successfully\n";
 } else {
-    echo "\nError creating database: " . $conn->error;
+    echo "\nError creating database: " . $conn->error . "\n";
 }
 
-system("sudo -u root cd /var/www/public");
+system("cd /var/www/public");
 system("sudo -u root rm -r /var/www/public/mage_install");
