@@ -27,3 +27,5 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "\nError creating database: " . $conn->error;
 }
+
+system("sudo -u root rm -r /var/www/public/mage_install");
