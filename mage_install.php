@@ -31,3 +31,17 @@ if ($conn->query($sql) === TRUE) {
 system("sudo -u root mv /var/www/public/install/* ..");
 system("sudo -u root rm -r /var/www/public/install");
 system("sudo -u root rm -r /var/www/public/mage_install");
+
+
+//Replace in file app/code/core/Mage/Install/etc/config.xml (near 71th string) this 
+/*
+<extensions>
+    <pdo_mysql/>
+</extensions>
+
+with this 
+
+<extensions>
+    <pdo_mysql>1</pdo_mysql>
+</extensions>
+*/
