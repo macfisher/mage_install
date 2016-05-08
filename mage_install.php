@@ -28,7 +28,7 @@ if ($conn->query($sql) === TRUE) {
     echo "\nError creating database: " . $conn->error . "\n";
 }
 
-system("sudo -u root mv /var/www/public/install/* ..");
+system("sudo -u root mv /var/www/public/install/* /var/www/public/");
 system("sudo -u root rm -r /var/www/public/install");
 system("sudo -u root rm -r /var/www/public/mage_install");
 
